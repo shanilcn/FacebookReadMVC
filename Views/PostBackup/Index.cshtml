@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FacebookReadMVC.Models.BackupPost>
+
+@{
+    ViewBag.Title = "Stored Posts";
+}
+
+<h2>Stored Posts</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MessageDisplay)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedTime)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MessageDisplay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedTime)
+            </td>
+            <td>
+                @Html.ActionLink("See Post", "Details", new { item.Id }) 
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,31 @@
+﻿@model FacebookReadMVC.Models.BackupPost
+
+@{
+    ViewBag.Title = Model.MessageDisplay;
+}
+
+<div class="jumbotron">
+    <h2>@Html.DisplayFor(model => model.MessageDisplay)</h2>
+    <p class="lead">@Html.DisplayFor(model => model.Author) <span class="smallFont"> posted at @Html.DisplayFor(model => model.CreatedTime)</span></p>
+    @if (Model.Type == "photo")
+    {
+        <img src="file:///G:/Photos/BackupApp/@Model.ImgObj.Src" height="@Model.ImgObj.Height" width="@Model.ImgObj.Width" style="align-content:center" />
+    }
+    <p class="postFont">@Html.Raw(Model.MessageHTML)</p>
+</div>
+
+<table class="table">
+    @foreach (var item in Model.Comments)
+    {
+        <tr>
+            <td class="smallFont" width="13%">
+                @Html.DisplayFor(modelItem => item.Name)<br />
+                @Html.DisplayFor(modelItem => item.CreatedTime)
+            </td>
+            <td class="commentFont">
+                @Html.Raw(item.MessageHTML)
+            </td>
+        </tr>
+    }
+
+</table>

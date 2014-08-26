@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="FacebookReadMVC" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Shanil\\documents\\visual\ studio\ 2013\\Projects\\FacebookReadMVC\\FacebookReadMVC\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Shanil\\documents\\visual\ studio\ 2013\\Projects\\FacebookReadMVC\\FacebookReadMVC\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="FacebookReadMVC.Properties.Settings.GroupReadConnectionString-Web.config Connection String" description="" value="Server=tcp:f6gcvj9maq.database.windows.net,1433;Database=MyDB;User ID=superdb@f6gcvj9maq;Password=P@ssword;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Shanil\\documents\\visual\ studio\ 2013\\Projects\\FacebookReadMVC\\FacebookReadMVC\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='FacebookReadMVC.Properties.Settings.GroupReadConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="MyDB-Web.config Connection String" description="" value="Server=tcp:f6gcvj9maq.database.windows.net,1433;Database=MyDB;User ID=superdb@f6gcvj9maq;Password=P@ssword;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Shanil\\documents\\visual\ studio\ 2013\\Projects\\FacebookReadMVC\\FacebookReadMVC\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyDB']/@connectionString" />
+  </parameter>
+</parameters>
